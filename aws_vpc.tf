@@ -12,5 +12,6 @@ resource "aws_vpc" "vpc" {
   enable_classiclink               = var.enable_classiclink               #(Optional) A boolean flag to enable/disable ClassicLink for the VPC. Only valid in regions and accounts that support EC2 Classic. See the ClassicLink documentation for more information. Defaults false.
   enable_classiclink_dns_support   = var.enable_classiclink_dns_support   #(Optional) A boolean flag to enable/disable ClassicLink DNS Support for the VPC. Only valid in regions and accounts that support EC2 Classic.
   assign_generated_ipv6_cidr_block = var.assign_generated_ipv6_cidr_block #(Optional) Requests an Amazon-provided IPv6 CIDR block with a /56 prefix length for the VPC. You cannot specify the range of IP addresses, or the size of the CIDR block. Default is false. Conflicts with ipv6_ipam_pool_id
-  tags                             = module.csh_conventions.tags          #(Optional) A map of tags to assign to the resource. If configured with a provider default_tags configuration block present,
+  tags                             = var.tags                             #(Optional) A map of tags to assign to the resource. If configured with a provider default_tags configuration block present,
+
 }
