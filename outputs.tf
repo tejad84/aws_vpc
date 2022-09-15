@@ -1,6 +1,6 @@
-output "name" { #The name of the VPC
-    value = module.csh_conventions.name
-}
+# output "name" { #The name of the VPC
+#     value = aws_vpc.vpc.name
+# }
 output "arn" { #Amazon Resource Name (ARN) of VPC
     value = aws_vpc.vpc.arn
 }

@@ -66,3 +66,7 @@ variable "is_bcdr" {
   default = false
   type    = bool
 }
+variable "tags" {
+  default = null
+  type    = any
+}
